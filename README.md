@@ -99,6 +99,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## JEST
 
+### toBe（プリミティブなテスト）
+
+### toEqual
+
 ### 対象のファイルのみテストする
 
 ```
