@@ -1,17 +1,3 @@
-## 参考サイト
-
-```
-・アトミックデザイン
-https://udemy.benesse.co.jp/design/web-design/atomic-design.html
-
-・Next.js のディレクトリ構成
-https://zenn.dev/hokuto_tech/articles/fdabaff60f5af2
-
-・MUI
-https://udemy.benesse.co.jp/development/mui.html
-
-```
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -49,53 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## ディレクトリ構造
-
-```
-├─ src/app/
-├─ components/
-├─ components/
-│  ├─ elements/
-│  │  └─ Button
-│  │     └─ Button.tsx
-│  └─ layouts/
-│     └─ Header
-│        └─ Header.tsx
-├─ features/
-│  └─ post/
-│     ├─ api/
-│     │  └─ getPost.ts
-│     ├─ styles/
-│     ├─ components/
-│     │  ├─ Post.tsx
-│     │  └─ Posts.tsx
-│     ├─ hooks/
-│     │  └─ usePost.ts
-│     └─ types/
-│        └─ index.ts
-├─ hooks/
-├─ styles/
-├─ types/
-├─ libs/
-├─ utils/
-└─ test/
-   ├─ components/
-   │  ├─ elements/
-   │  │  └─ Button.test.tsx
-   │  └─ layouts/
-   │     └─ Header.test.tsx
-   ├─ features/
-   │  └─ post/
-   │     ├─ api/
-   │     │  └─ getPost.test.ts
-   │     ├─ components/
-   │     │  ├─ Post.test.tsx
-   │     │  └─ Posts.test.tsx
-   │     ├─ hooks/
-   │     │  └─ usePost.test.ts
-   └─ utils/
-      └─ someUtil.test.ts
-```
 
 ## JEST
 
@@ -106,5 +45,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ### 対象のファイルのみテストする
 
 ```
-yarn jest xxx.test.ts
+yarn jest xxx.test
 ```
