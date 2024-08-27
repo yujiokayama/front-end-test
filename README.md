@@ -110,6 +110,8 @@ src/app
 
 ## JEST
 
+・install
+
 ```
 yarn add -D jest @types/jest ts-jest
 ```
@@ -122,6 +124,20 @@ yarn jest xxx.test
 
 ## Testing Library
 
+・install
+
 ```
 yarn add -D @testing-library/react @testing-library/jest-dom @testing-library/dom @testing-library/user-event jest jest-environment-jsdom ts-jest babel-jest @babel/preset-env @babel/preset-react @babel/preset-typescript
+```
+
+・babel.config.js
+
+```
+module.exports = {
+  presets: [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+  ],
+};
 ```
