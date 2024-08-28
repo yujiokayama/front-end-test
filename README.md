@@ -127,8 +127,10 @@ yarn jest xxx.test
 ・install
 
 ```
-yarn add -D @testing-library/react @testing-library/jest-dom @testing-library/dom @testing-library/user-event jest jest-environment-jsdom ts-jest babel-jest @babel/preset-env @babel/preset-react @babel/preset-typescript
+yarn add -D @testing-library/react @testing-library/dom @testing-library/jest-dom @testing-library/user-event jest jest-environment-jsdom ts-jest babel-jest @babel/preset-env @babel/preset-react @babel/preset-typescript
 ```
+
+@testing-library/dom を install しないと testing-library/react から screen を import できなかった、謎
 
 ・babel.config.js
 
@@ -140,4 +142,12 @@ module.exports = {
     "@babel/preset-typescript",
   ],
 };
+```
+
+## Playwright
+
+・install
+
+```
+
 ```
