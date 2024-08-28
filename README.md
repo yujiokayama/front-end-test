@@ -38,39 +38,56 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## ディレクトリ構造
 
 ```
-src/app
-├── __test__
-│   └── utils
-│       ├── async_func.test.ts
-│       ├── calc.test.ts
-│       ├── divide.test.ts
-│       ├── groupe.test.ts
-│       ├── matcher_func.test.ts
-│       ├── mock_called.test.ts
-│       ├── mock_func.test.ts
-│       ├── mock_module.test.ts
-│       ├── mock_returen.test.ts
-│       ├── mock_spy.test.ts
-│       ├── setup_teardown.test.ts
-│       └── shop.test.ts
-├── components
-│   ├── atoms
-│   ├── molecules
-│   └── organisms
-├── favicon.ico
-├── globals.css
-├── layout.tsx
-├── page.module.css
-├── page.tsx
-├── test
-│   └── page.tsx
-└── utils
-    ├── async_func.ts
-    ├── calc.ts
-    ├── divide.ts
-    ├── mock_module.ts
-    ├── mock_spy.ts
-    └── shop.ts
+src
+└── app
+    ├── __test__
+    │   ├── components
+    │   │   ├── atoms
+    │   │   │   └── Button.test.tsx
+    │   │   └── molecules
+    │   │       ├── AsyncComponent.test.tsx
+    │   │       └── Form.test.tsx
+    │   ├── hooks
+    │   │   └── useCounter.test.tsx
+    │   └── utils
+    │       ├── async_func.test.ts
+    │       ├── calc.test.ts
+    │       ├── divide.test.ts
+    │       ├── groupe.test.ts
+    │       ├── matcher_func.test.ts
+    │       ├── mock_called.test.ts
+    │       ├── mock_func.test.ts
+    │       ├── mock_module.test.ts
+    │       ├── mock_returen.test.ts
+    │       ├── mock_spy.test.ts
+    │       ├── setup_teardown.test.ts
+    │       └── shop.test.ts
+    ├── components
+    │   ├── atoms
+    │   │   └── Button.tsx
+    │   ├── molecules
+    │   │   ├── AsyncComponent.tsx
+    │   │   └── Form.tsx
+    │   └── organisms
+    ├── favicon.ico
+    ├── globals.css
+    ├── hooks
+    │   └── useCounter.tsx
+    ├── layout.tsx
+    ├── page.module.css
+    ├── page.tsx
+    ├── test
+    │   └── page.tsx
+    ├── ui
+    │   └── page.tsx
+    └── utils
+        ├── async_func.ts
+        ├── calc.ts
+        ├── divide.ts
+        ├── mock_module.ts
+        ├── mock_spy.ts
+        └── shop.ts
+
 ```
 
 ## UI テスト
@@ -149,5 +166,5 @@ module.exports = {
 ・install
 
 ```
-
+yarn create playwright
 ```
