@@ -25,5 +25,7 @@ describe("Form コンポーネントのテスト", () => {
 
     await userEvent.click(button);
     expect(alertSpy).toHaveBeenCalledWith("submitted: test");
+
+    alertSpy.mockRestore();
   });
 });
