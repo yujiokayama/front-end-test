@@ -168,3 +168,31 @@ module.exports = {
 ```
 yarn create playwright
 ```
+
+・package.json
+
+```
+  "scripts": {
+    "playwright": "playwright test",
+    "playwright:ui": "playwright test --ui",
+    "playwright:headed": "playwright test --headed",
+    "playwright:report": "playwright show-report"
+  },
+```
+
+### Playwright実行
+
+- **playwright**: `playwright test`
+
+  - デフォルトでは、ヘッドレスモード（ブラウザの UI を表示しないモード）でテストが実行。
+
+- **playwright:ui**: `playwright test --ui`
+
+  - テストの実行状況を視覚的に確認しながらデバッグすることができる。
+
+- **playwright:headed**: `playwright test --headed`
+
+  - ヘッドレスモードではなく、ブラウザの UI を表示してテストを実行する。テストの実行中にブラウザの動作を確認することができる。
+
+- **playwright:report**: `playwright show-report`
+  - テスト結果のレポートを表示する。
