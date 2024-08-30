@@ -188,7 +188,7 @@ yarn create playwright
 
 - **playwright:ui**: `playwright test --ui`
 
-  - テストの実行状況を視覚的に確認しながらデバッグすることができる。
+  - GUI上でテストの実行状況を視覚的に確認しながらデバッグすることができる。
 
 - **playwright:headed**: `playwright test --headed`
 
