@@ -29,13 +29,3 @@ export async function PUT(request: Request) {
 
   return NextResponse.json(todos.find((todo) => todo.id === id));
 }
-
-// DELETE /api/todo/:id
-export async function DELETE(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const id = parseInt(searchParams.get("id") || "0", 10);
-
-  todos = todos.filter((todo) => todo.id !== id);
-
-  return NextResponse.json({ id });
-}
