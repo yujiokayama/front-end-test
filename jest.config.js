@@ -8,6 +8,6 @@ module.exports = {
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
+    "^.+\\.(js|jsx|ts|tsx)$": ["babel-jest", { presets: ["next/babel"] }],
   },
 };

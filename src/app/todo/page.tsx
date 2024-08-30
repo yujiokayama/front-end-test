@@ -2,6 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import {
+  Button,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  List,
+  ListItem,
+  ListItemText,
+  Checkbox,
+} from "@mui/material";
 
 type Todo = {
   id: number;
@@ -25,18 +37,6 @@ export default function UiTest() {
     setTodos([...todos, res.data]);
   };
 
-  const handleAddTodo = () => {
-    addTodo(newTask);
-    setNewTask("");
-    setIsModalOpen(false);
-  };
-
-  const updateTodo = async (id: number, task: string, completed: boolean) => {
-    const res = await axios.put(`/api/todo/${id}`, { task, completed });
-
-    setTodos(todos.map((todo) => (todo.id === id ? res.data : todo)));
-  };
-
   useEffect(() => {
     if (!hasFetched.current) {
       getTodos();
@@ -44,32 +44,62 @@ export default function UiTest() {
     }
   }, []);
 
-  return (
-    <>
-      <h1>Todo</h1>
-      <ul>
-        {todos.map((todo, todoIndex) => (
-          <li key={todoIndex}>{todo.task}</li>
-        ))}
-      </ul>
-      <div>
-        <button onClick={() => setIsModalOpen(true)}>Add Todo</button>
+  const handleAddTodo = () => {
+    addTodo(newTask);
+    setNewTask("");
+    setIsModalOpen(false);
+  };
 
-        {isModalOpen && (
-          <div className="modal">
-            <div className="modal-content">
-              <h2>New Task</h2>
-              <input
-                type="text"
-                value={newTask}
-                onChange={(e) => setNewTask(e.target.value)}
-              />
-              <button onClick={handleAddTodo}>Add</button>
-              <button onClick={() => setIsModalOpen(false)}>Cancel</button>
-            </div>
-          </div>
-        )}
-      </div>
-    </>
+  return (
+    <div>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setIsModalOpen(true)}
+      >
+        Add Todo
+      </Button>
+      <Dialog open={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <DialogTitle>Add a new task</DialogTitle>
+        <DialogContent>
+          <TextField
+            autoFocus
+            margin="dense"
+            label="New Task"
+            type="text"
+            fullWidth
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setIsModalOpen(false)} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleAddTodo} color="primary">
+            Add
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <List>
+        {todos.map((todo) => (
+          <ListItem key={todo.id} dense button>
+            <Checkbox
+              edge="start"
+              checked={todo.completed}
+              tabIndex={-1}
+              disableRipple
+              inputProps={{
+                "aria-labelledby": `checkbox-list-label-${todo.id}`,
+              }}
+            />
+            <ListItemText
+              id={`checkbox-list-label-${todo.id}`}
+              primary={todo.task}
+            />
+          </ListItem>
+        ))}
+      </List>
+    </div>
   );
 }
