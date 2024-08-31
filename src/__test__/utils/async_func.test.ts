@@ -1,4 +1,4 @@
-import { delay } from "@/utils/async_func";
+import { delay } from "utils/async_func";
 
 it("delay関数のテスト", async () => {
   const result = await delay("test", 1000);

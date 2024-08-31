@@ -133,6 +133,10 @@ src
 yarn add -D jest @types/jest ts-jest
 ```
 
+### 詰まったところ
+
+- [AppRouter と Jest で babel の設定を併用する](https://zenn.dev/ma_me/articles/c4ab23f91f2179)
+
 ### 対象のファイルのみテストする
 
 ```
@@ -147,7 +151,7 @@ yarn jest xxx.test
 yarn add -D @testing-library/react @testing-library/dom @testing-library/jest-dom @testing-library/user-event jest jest-environment-jsdom ts-jest babel-jest @babel/preset-env @babel/preset-react @babel/preset-typescript
 ```
 
-@testing-library/dom を install しないと testing-library/react から screen を import できなかった、謎
+**@testing-library/dom を install しないと testing-library/react から screen を import できなかった、謎**
 
 ・babel.config.js
 
@@ -180,7 +184,7 @@ yarn create playwright
   },
 ```
 
-### Playwright実行
+### Playwright コマンド
 
 - **playwright**: `playwright test`
 
@@ -188,7 +192,7 @@ yarn create playwright
 
 - **playwright:ui**: `playwright test --ui`
 
-  - GUI上でテストの実行状況を視覚的に確認しながらデバッグすることができる。
+  - GUI 上でテストの実行状況を視覚的に確認しながらデバッグすることができる。
 
 - **playwright:headed**: `playwright test --headed`
 

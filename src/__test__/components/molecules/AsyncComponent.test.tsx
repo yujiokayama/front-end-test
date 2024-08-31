@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import AsyncComponent from "@/components/molecules/AsyncComponent";
+import AsyncComponent from "components/molecules/AsyncComponent";
 
 describe("AsyncComponent コンポーネントのテスト", () => {
   it("初期表示ではテキストはInitial text", () => {

@@ -1,4 +1,4 @@
-import { divide, ZeroDivisorError } from "@/utils/divide";
+import { divide, ZeroDivisorError } from "utils/divide";
 
 // toThrow
 it("0で割るとエラーが発生する", () => {

@@ -1,4 +1,4 @@
-import { ShoppingList, createShoppingList } from "@/utils/shop";
+import { ShoppingList, createShoppingList } from "utils/shop";
 
 /**
  *  1. `addItem`メソッドが、アイテムをリストに追加できることを確認するテストケース

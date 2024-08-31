@@ -1,5 +1,5 @@
 import fs from "fs";
-import { readFile } from "@/utils/mock_module";
+import { readFile } from "utils/mock_module";
 
 jest.mock("fs");
 

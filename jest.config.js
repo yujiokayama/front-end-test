@@ -2,9 +2,10 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "jest-environment-jsdom",
-  // testEnvironment: "node",
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/app/$1",
+    "^components/(.*)$": "<rootDir>/src/components/$1",
+    "^hooks/(.*)$": "<rootDir>/src/hooks/$1",
+    "^utils/(.*)$": "<rootDir>/src/utils/$1",
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
   transform: {

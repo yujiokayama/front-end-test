@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import Button from "@/components/atoms/Button";
+import Button from "components/atoms/Button";
 
 describe("Buttonコンポーネントのテスト", () => {
   it("正しいテキストでボタンをレンダリングする", () => {

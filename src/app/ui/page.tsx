@@ -1,8 +1,8 @@
 "use client";
 
-import Button from "@/components/atoms/Button";
-import Form from "@/components/molecules/Form";
-import AsyncComponent from "@/components/molecules/AsyncComponent";
+import Button from "components/atoms/Button";
+import Form from "components/molecules/Form";
+import AsyncComponent from "components/molecules/AsyncComponent";
 
 export default function UiTest() {
   return (

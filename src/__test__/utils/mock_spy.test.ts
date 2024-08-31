@@ -1,4 +1,4 @@
-import * as mockSpy from "@/utils/mock_spy";
+import * as mockSpy from "utils/mock_spy";
 
 it("sum関数が呼び出されるか", () => {
   const spy = jest.spyOn(mockSpy, "sum");

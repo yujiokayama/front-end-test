@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import Form from "@/components/molecules/Form";
+import Form from "components/molecules/Form";
 
 describe("Form コンポーネントのテスト", () => {
   it("初期表示ではテキストは空欄", () => {

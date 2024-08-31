@@ -1,4 +1,4 @@
-import { sum, multiply } from "@/utils/calc";
+import { sum, multiply } from "utils/calc";
 
 // describe("足し算", () => {
 //   it("1と2を足すと3になる", () => {

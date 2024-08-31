@@ -25,7 +25,6 @@ export default function UiTest() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newTask, setNewTask] = useState("");
-  const hasFetched = useRef(false);
 
   const getTodos = async () => {
     const res = await axios.get("/api/todo");
@@ -38,10 +37,7 @@ export default function UiTest() {
   };
 
   useEffect(() => {
-    if (!hasFetched.current) {
-      getTodos();
-      hasFetched.current = true;
-    }
+    getTodos();
   }, []);
 
   const handleAddTodo = () => {
@@ -82,8 +78,8 @@ export default function UiTest() {
         </DialogActions>
       </Dialog>
       <List>
-        {todos.map((todo) => (
-          <ListItem key={todo.id} dense button>
+        {todos.map((todo, todoIndex) => (
+          <ListItem key={todoIndex} dense button>
             <Checkbox
               edge="start"
               checked={todo.completed}
