@@ -21,7 +21,7 @@ type Todo = {
   completed: boolean;
 };
 
-export default function UiTest() {
+export default function Todo() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newTask, setNewTask] = useState("");

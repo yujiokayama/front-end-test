@@ -1,21 +1,20 @@
-import * as React from "react";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
+"use client";
 
-export default function Home() {
+import React, { useState } from "react";
+
+export default function PlayGround() {
+  const [count, setCount] = useState(0);
+  const onButtonClick = () => {
+    const new_count = count + 1;
+
+    setCount(new_count);
+    console.log(`count：${new_count}`);
+  };
+
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h1>Next.js with TypeScript example</h1>
-      </Box>
-    </Container>
+    <>
+      <h1>PlayGround</h1>
+      <button onClick={onButtonClick}>押して！</button>
+    </>
   );
 }
