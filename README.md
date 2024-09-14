@@ -140,6 +140,22 @@ module.exports = {
 npx sb@7 init
 ```
 
+・test library install
+
+```
+yarn add -D @storybook/testing-library @storybook/jest
+```
+
+・chromatic
+
+```
+yarn add --dev chromatic
+npx chromatic token
+```
+tokenはプロジェクトによって異なる
+
+
+
 ## Playwright
 
 ・install
@@ -175,3 +191,5 @@ yarn create playwright
 
 - **playwright:report**: `playwright show-report`
   - テスト結果のレポートを表示する。
+- **playwright:codegen {url}**: `playwright codegen`
+  - {url}にテスト対象の url を指定、Chromium ブラウザで操作した内容をそのままテストコードに変換してくれる。

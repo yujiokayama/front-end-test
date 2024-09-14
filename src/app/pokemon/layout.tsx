@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Playground",
-  description: "NextやらReactやら色々試す場所",
+  title: "ポケモン",
+  description: "ポケモンの情報を取得する",
 };
 
 export default function RootLayout({
