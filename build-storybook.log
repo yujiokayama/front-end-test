@@ -1,11 +1,11 @@
 @storybook/cli v7.6.20
 
-info => Cleaning outputDir: /var/folders/8x/sqnyf2bs62j3_k4cqt4kjtlc0000gn/T/chromatic--87033-jtboJOJ1dBzh
+info => Cleaning outputDir: /var/folders/8x/sqnyf2bs62j3_k4cqt4kjtlc0000gn/T/chromatic--57973-3mtJwJ95Kbdw
 info => Loading presets
 info => Building manager..
-info => Manager built (337 ms)
+info => Manager built (377 ms)
 info => Building preview..
-info => Copying static files: /Users/yujiokayama/MY-DEV/font-end-test/node_modules/@storybook/manager/static at /var/folders/8x/sqnyf2bs62j3_k4cqt4kjtlc0000gn/T/chromatic--87033-jtboJOJ1dBzh/sb-common-assets
+info => Copying static files: /Users/yujiokayama/MY-DEV/font-end-test/node_modules/@storybook/manager/static at /var/folders/8x/sqnyf2bs62j3_k4cqt4kjtlc0000gn/T/chromatic--57973-3mtJwJ95Kbdw/sb-common-assets
 WARN No story files found for the specified pattern: src/**/*.mdx
 info Using Babel compiler
 info Addon-docs: using MDX2
@@ -21,9 +21,9 @@ WARN   737.7cf9a13f.iframe.bundle.js (718 KiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
 WARN   main (933 KiB)
-WARN       runtime~main.8fc14cd3.iframe.bundle.js
+WARN       runtime~main.ad015091.iframe.bundle.js
 WARN       714.8b0f8a78.iframe.bundle.js
 WARN       main.146ba758.iframe.bundle.js
 WARN 
-info => Preview built (49 s)
-info => Output directory: /var/folders/8x/sqnyf2bs62j3_k4cqt4kjtlc0000gn/T/chromatic--87033-jtboJOJ1dBzh
+info => Preview built (36 s)
+info => Output directory: /var/folders/8x/sqnyf2bs62j3_k4cqt4kjtlc0000gn/T/chromatic--57973-3mtJwJ95Kbdw
